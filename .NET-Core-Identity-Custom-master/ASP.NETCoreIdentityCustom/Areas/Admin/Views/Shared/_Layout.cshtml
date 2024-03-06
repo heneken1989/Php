@@ -1,0 +1,84 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ASP.NETCoreIdentityCustom</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="~/admin/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="~/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="~/admin/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+        <!-- Preloader -->
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__wobble" src="~/admin/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+        </div>
+        @Html.Partial("Header")
+        @Html.Partial("SideBar")
+        <div class="wrapper" style="margin-left:300px">
+            <div class="container">
+                <main role="main" class="pb-3">     
+                    <br />
+                    <br />
+                    <br />
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+        <!-- ./wrapper -->
+
+    @Html.Partial("Footer")
+    <!-- Main Footer -->
+    @await RenderSectionAsync("Scripts", required: false)
+
+<!-- REQUIRED SCRIPTS -->
+<!-- jQuery -->
+<script src="~/admin/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="~/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="~/admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="~/admin/dist/js/adminlte.js"></script>
+
+<!-- PAGE PLUGINS -->
+<!-- jQuery Mapael -->
+<script src="~/admin/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+<script src="~/admin/plugins/raphael/raphael.min.js"></script>
+<script src="~/admin/plugins/jquery-mapael/jquery.mapael.min.js"></script>
+<script src="~/admin/plugins/jquery-mapael/maps/usa_states.min.js"></script>
+<!-- ChartJS -->
+<script src="~/admin/plugins/chart.js/Chart.min.js"></script>
+
+<!-- AdminLTE for demo purposes -->
+<script src="~/admin/dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="~/admin/dist/js/pages/dashboard2.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#blogtable').DataTable();
+        });
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+
+    @*  FontENd JS *@
+
+
+
+
+
+</body>
+</html>
